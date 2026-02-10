@@ -116,7 +116,7 @@ export const Game: React.FC = () => {
         <div className="absolute inset-0 z-30 flex items-center justify-center bg-black/80 backdrop-blur-sm cursor-auto">
           <div className="text-center p-10 bg-gray-900/90 border-4 border-red-800 rounded-3xl shadow-2xl max-w-md w-full mx-4">
             <h1 className="text-6xl font-black text-red-600 mb-2 tracking-tighter drop-shadow-[0_5px_5px_rgba(0,0,0,0.8)]">
-              {gameOver ? 'GAME OVER' : 'ZOMBIE PUNCH'}
+              {gameOver ? 'GAME OVER' : 'Zombie Smackdown'}
             </h1>
             
             {gameOver && (
