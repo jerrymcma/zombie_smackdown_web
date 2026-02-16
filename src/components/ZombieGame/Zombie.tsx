@@ -22,7 +22,7 @@ export const Zombie: React.FC<ZombieProps> = ({ id, x, y, onHit, onMiss }) => {
     return () => clearTimeout(timer);
   }, [id, isHit, onMiss]);
 
-  const handleClick = (e: React.MouseEvent) => {
+  const handleClick = (e: React.MouseEvent | React.TouchEvent) => {
     e.stopPropagation(); // Prevent clicking through to background
     if (!isHit) {
       setIsHit(true);
@@ -43,8 +43,10 @@ export const Zombie: React.FC<ZombieProps> = ({ id, x, y, onHit, onMiss }) => {
         transform: 'translate(-50%, -50%)',
         cursor: 'none', // We use custom cursor
         zIndex: 10,
+        touchAction: 'none'
       }}
       onClick={handleClick}
+      onTouchStart={handleClick}
     >
       <img
         src="https://public.youware.com/users-website-assets/prod/95a4aea9-a033-4349-acd3-29ccdf89f787/da10e2579e7f4c76a3a8d4c76da2d30c.png"

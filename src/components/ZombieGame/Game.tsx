@@ -78,7 +78,9 @@ export const Game: React.FC = () => {
       />
 
       {/* Custom Cursor */}
-      <Cursor />
+      <div className="hidden md:block">
+        <Cursor />
+      </div>
 
       {/* HUD */}
       <div className="absolute top-0 left-0 w-full p-6 flex justify-between items-start z-20 pointer-events-none">
@@ -134,6 +136,7 @@ export const Game: React.FC = () => {
 
             <button
               onClick={handleStart}
+              onTouchStart={handleStart}
               className="group relative px-8 py-4 bg-red-700 hover:bg-red-600 text-white text-2xl font-bold rounded-xl transition-all transform hover:scale-105 active:scale-95 shadow-[0_0_20px_rgba(220,38,38,0.6)] overflow-hidden"
             >
               <span className="relative z-10">{gameOver ? 'PLAY AGAIN' : 'START RAMPAGE'}</span>
