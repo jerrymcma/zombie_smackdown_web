@@ -60,7 +60,7 @@ export const Zombie: React.FC<ZombieProps> = ({ id, x, y, onHit, onMiss }) => {
           animate={{ scale: 1.5, opacity: 0 }}
           className="absolute top-0 left-0 w-full h-full flex items-center justify-center pointer-events-none"
         >
-          <span className="text-4xl font-bold text-red-600 drop-shadow-lg">POW!</span>
+          <span className="text-4xl font-bold text-red-600 drop-shadow-lg">SMACK!</span>
         </motion.div>
       )}
     </motion.div>
